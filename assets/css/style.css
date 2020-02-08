@@ -1,0 +1,275 @@
+
+/* Main Style */
+body{
+    background-color: #24292E;
+    font-family: Comfortaa;
+    color: #ffffff;
+    font-size: 0.875rem;
+}
+section{
+    margin-bottom: 30px;
+    min-height: 600px;
+}
+
+.header{
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.header::after{
+    content: "";
+    background-color: #736EFE;
+    border-radius: 5px;
+    display: block;
+    height: 4px;
+    /* width: 45%; */
+    width: 70px;
+    margin-top: 15px;
+}
+
+.btn-custom{
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 20px;
+    border: 2px solid #736EFE;
+    border-radius: 4px;
+    background-color: rgba(115, 110, 254, 0.1);
+    color: #736EFE;
+}
+
+.btn-sosmed{
+    border-radius: 50%;
+    border: 2px solid #736EFE;
+    background-color: rgba(115, 110, 254, 0.1);
+    color: #736EFE;
+    display: inline-block;
+    font-size: 1.5625rem;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 50px;
+}
+
+.btn-sosmed:hover{
+    color: #ffffff;
+    transform: rotateY(360deg);
+    transition-duration: 1s !important;
+}
+
+.facebook.active,
+.btn-sosmed.facebook:hover{
+    border: 2px solid #344F87;
+    background-color: #344F87;
+    color: #ffffff;
+}
+
+.twitter.active,
+.btn-sosmed.twitter:hover{
+    border: 2px solid #55ACEE;
+    background-color: #55ACEE;
+    color: #ffffff;
+}
+
+.instagram.active,
+.btn-sosmed.instagram:hover{
+    border: 2px solid #F50057;
+    background-color: #F50057;
+    color: #ffffff;
+}
+
+.github.active,
+.btn-sosmed.github:hover{
+    color: #24292E;
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+}
+
+input.form-custom,
+textarea.form-custom{
+    border: 2px solid #736EFE;
+    background-color: rgba(115, 110, 254, 0.1);
+    color: #ffffff;
+    font-size: .9rem;
+    padding: 1rem unset;
+}
+
+input.form-custom:focus,
+textarea.form-custom:focus{
+    background-color: transparent;
+    border: 2px solid #736EFE;
+    color: #ffffff;
+}
+
+.hide-on-sm{
+    display: block;
+}
+/* End Main Style*/
+
+/* Navbar */
+header{
+    display: inline;
+}
+
+.nav-custom{
+    background-color: rgba(36, 41, 46, 0.75);
+    color: #ffffff;
+}
+
+nav .btn-custom{
+    background-color: transparent;
+    border: 2px solid transparent;
+    color: #ffffff;
+}
+
+nav .btn-custom:hover,
+nav .btn-active{
+    border: 2px solid #736EFE;
+    color: #736EFE;
+    background-color: rgba(115, 110, 254, 0.1);
+}
+
+nav .btn-active:hover,
+.btn-custom:hover{
+    color: #ffffff;
+    background-color: transparent;
+}
+
+nav .nav-item{
+    margin-left: 0.5rem;
+}
+/* End Navbar */
+
+/* Home Section */
+#home h3.header{
+    line-height: 2.5rem;
+}
+
+#home .img-certificate{
+    margin-bottom: 18.6px;
+}
+/* End Section */
+
+/* About Section */
+#about .frame-about{
+    padding: 8.75rem 1.25rem 3.125rem;
+    border: 4px solid #736EFE;
+    text-align: justify;
+}
+
+.frame-about object {
+    top: -50px;
+    left: -45px;
+    position: absolute;
+}
+/* End Section */
+
+/* Skill Section */
+.card-skill{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    height: 350px;
+    border: 3px solid #736EFE;
+    margin-left: 94px;
+}
+
+.card-skill > .card-header{
+    height: 150px;
+    border-bottom: 0;
+    background-color: transparent;
+}
+
+.card-skill .card-body{
+    height: 12.5rem;
+    padding: 6.25rem 1.25rem;
+}
+
+.card-skill:first-child{
+    margin-left: 0;
+}
+
+.progress{
+    height: 5px;
+    background-color: rgba(115, 110, 254, 0.1);
+}
+
+.progress-bar{
+    background-color: #736EFE;
+}
+/* End Section */
+
+/* Portfolio Section */
+#portfolio .header::after{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#portfolio .card{
+    border: 2px solid #736EFE;
+    background-color: rgba(115, 110, 254, 0.1) !important;
+    margin-bottom: 20px;
+    min-height: 400px;
+}
+#portfolio .card-header{
+    padding: 12px;
+}
+
+#portfolio .card-footer{
+    border: 0;
+    background-color: transparent;
+}
+
+#portfolio .img-thumbnail{
+    background-color: rgba(115, 110, 254, 0.1);
+    border: 2px solid #736EFE;
+}
+/* End Section */
+
+@media (max-width:993px){
+    nav .nav-item{
+        margin-left: 0;
+    }
+
+    nav li .btn-custom{
+        border: 0;
+    }
+
+    nav li .btn-custom:hover,
+    nav li .btn-active{
+        border: 0;
+        background-color: transparent;
+    }
+
+    .hide-on-sm{
+        display: none;
+    }
+
+    #home{
+        margin-bottom: 70px;
+    }
+
+    #about .frame-about{
+        padding-top: 0;
+    }
+
+    .frame-about object {
+        position: relative;
+        display: block;
+        left: 0;
+        top: -60px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width:576){
+    #home .btn-custom{
+        display: block;
+    }
+
+    #home .btn-custom:last-child{
+        margin-left: 0 !important;
+        margin-top: 4px;
+    }
+}
