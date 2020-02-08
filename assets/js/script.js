@@ -39,7 +39,8 @@ $( document ).ready( function () {
                 autoplay: true,
                 infinite: true,
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                arrows: false
             } );
         }
     }
@@ -53,6 +54,8 @@ $( document ).ready( function () {
 
         if ( wScroll > navTop ) {
             $( '#nav-main' ).addClass( 'shadow' );
+            $( '#nav-main' ).addClass( 'fixed-top' );
+            $( '#home' ).css( 'margin-top', navTop );
             if ( wScroll >= 0 && wScroll < about ) {
                 btnActivate( '#btnNavHome' );
                 elementAnimate( 'section', '#home' );
@@ -79,6 +82,8 @@ $( document ).ready( function () {
         } else {
             if ( wScroll == 0 ) {
                 $( '#nav-main' ).removeClass( 'shadow' );
+                $( '#nav-main' ).removeClass( 'fixed-top' );
+                $( '#home' ).css( 'margin-top', 0 );
                 btnActivate( '#btnNavHome' );
                 elementAnimate( 'section', '#home' );
             }

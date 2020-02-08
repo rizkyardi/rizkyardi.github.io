@@ -152,6 +152,7 @@ nav .nav-item{
 #home .img-certificate{
     margin-bottom: 18.6px;
 }
+
 /* End Section */
 
 /* About Section */
@@ -259,7 +260,7 @@ footer a:hover{
     color: #ffffff;
 }
 
-@media (max-width:993px){
+@media screen and (max-width:993px){
     nav .nav-item{
         margin-left: 0;
     }
@@ -296,12 +297,12 @@ footer a:hover{
     }
 }
 
-@media (max-width:576){
-    #home .btn-custom{
-        display: block;
+@media screen and (max-width:576px){
+    #home a.btn-custom{
+        display: block !important;
     }
 
-    #home .btn-custom:last-child{
+    #home a.btn-custom:last-child{
         margin-left: 0 !important;
         margin-top: 4px;
     }
