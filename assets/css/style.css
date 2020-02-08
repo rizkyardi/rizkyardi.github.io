@@ -11,6 +11,10 @@ section{
     min-height: 600px;
 }
 
+object{
+    display: inline-block;
+}
+
 .header{
     display: inline-block;
     margin-bottom: 30px;
@@ -225,6 +229,35 @@ nav .nav-item{
     border: 2px solid #736EFE;
 }
 /* End Section */
+
+/* Slick Custom Style */
+.slick-next,.slick-prev{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(115, 110, 254, 0.1);
+    border: 2px solid #736EFE;
+    border-radius: 50%;
+}
+.slick-next::before,.slick-prev::before{
+    color: #736EFE;
+}
+
+.slick-next{
+    right: -64px;
+}
+
+.slick-prev{
+    left: -64px;
+}
+
+/* Footer */
+footer a{
+    color: #736EFE;
+}
+footer a:hover{
+    text-decoration: none;
+    color: #ffffff;
+}
 
 @media (max-width:993px){
     nav .nav-item{

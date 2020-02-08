@@ -2,10 +2,47 @@ $( document ).ready( function () {
 
     const navTop = $( '#nav-main' ).height();
     var wScroll = 0;
-    var wWidth = 0;
     $( window ).scroll( mainAnimate );
-    window.addEventListener( "resize", mainAnimate );
-    window.addEventListener( "load", mainAnimate );
+    window.addEventListener( "resize", function () {
+        mainAnimate();
+        var width = this.window.innerWidth;
+        $( '.slider-skill' ).slick( 'unslick' );
+        $( '.slider-portfolio' ).slick( 'unslick' );
+        slickSlider( width, '.slider-skill' );
+        slickSlider( width, '.slider-portfolio' );
+    } );
+
+    window.addEventListener( "load", function () {
+        mainAnimate();
+        var width = this.window.innerWidth;
+        slickSlider( width, '.slider-skill' );
+        slickSlider( width, '.slider-portfolio' );
+    } );
+
+    function slickSlider( width, element ) {
+        if ( width > 933 && width <= 1366 ) {
+            $( $( element ) ).slick( {
+                autoplay: true,
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1
+            } );
+        } else if ( width > 576 && width <= 933 ) {
+            $( $( element ) ).slick( {
+                autoplay: true,
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 1
+            } );
+        } else {
+            $( $( element ) ).slick( {
+                autoplay: true,
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            } );
+        }
+    }
 
     function mainAnimate() {
         const about = parseInt( $( '#about' ).offset().top ) - ( navTop * 2 );
