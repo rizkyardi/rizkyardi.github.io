@@ -110,12 +110,13 @@ $( document ).ready( function () {
     $( 'nav a.btn-custom' ).click( function ( e ) {
         var elementHash = this.hash;
         var element = $( elementHash );
-
-        e.preventDefault();
-        if ( elementHash == "#home" ) {
-            $( "html, body" ).animate( { scrollTop: 0 }, 600, 'easeInOutExpo' );
-        } else {
-            $( "html, body" ).animate( { scrollTop: element.offset().top - ( navTop * 2 ) }, 600, 'easeInOutExpo' );
+        if ( elementHash != "" ) {
+            e.preventDefault();
+            if ( elementHash == "#home" ) {
+                $( "html, body" ).animate( { scrollTop: 0 }, 600, 'easeInOutExpo' );
+            } else {
+                $( "html, body" ).animate( { scrollTop: element.offset().top - ( navTop * 2 ) }, 600, 'easeInOutExpo' );
+            }
         }
 
     } );
