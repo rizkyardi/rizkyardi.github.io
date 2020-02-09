@@ -272,7 +272,7 @@ footer a:hover{
     nav li .btn-custom:hover,
     nav li .btn-active{
         border: 0;
-        background-color: transparent;
+        background-color: inherit;
     }
 
     .hide-on-sm{
@@ -298,6 +298,10 @@ footer a:hover{
 }
 
 @media screen and (max-width:576px){
+    section{
+        margin-bottom: 54px;
+    }
+
     #home a.btn-custom{
         display: block !important;
     }
@@ -305,5 +309,26 @@ footer a:hover{
     #home a.btn-custom:last-child{
         margin-left: 0 !important;
         margin-top: 4px;
+    }
+
+    .frame-sosmed{
+        text-align: center;
+    }
+
+    .slick-next, .slick-prev{
+        background-color: rgba(115, 110, 254, 0.1);
+        border: 2px solid #736EFE;
+        z-index: 1;
+    }
+    .slick-next::before,.slick-prev::before{
+        color: #736EFE;
+    }
+
+    .slick-next{
+        right: 35px;
+    }
+
+    .slick-prev{
+        left: 35px;
     }
 }

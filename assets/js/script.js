@@ -1,20 +1,23 @@
 $( document ).ready( function () {
-
     const navTop = $( '#nav-main' ).height();
     var wScroll = 0;
+    var slide = false;
     $( window ).scroll( mainAnimate );
-    window.addEventListener( "resize", function () {
+
+    $( window ).on( "load", function () {
         mainAnimate();
-        var width = this.window.innerWidth;
-        $( '.slider-skill' ).slick( 'unslick' );
-        $( '.slider-portfolio' ).slick( 'unslick' );
+        var width = window.innerWidth;
         slickSlider( width, '.slider-skill' );
         slickSlider( width, '.slider-portfolio' );
     } );
 
-    window.addEventListener( "load", function () {
+    $( window ).on( "resize", function () {
         mainAnimate();
-        var width = this.window.innerWidth;
+        var width = window.innerWidth;
+        if ( slide ) {
+            $( '.slider-skill' ).slick( 'unslick' );
+            $( '.slider-portfolio' ).slick( 'unslick' );
+        }
         slickSlider( width, '.slider-skill' );
         slickSlider( width, '.slider-portfolio' );
     } );
@@ -39,10 +42,11 @@ $( document ).ready( function () {
                 autoplay: true,
                 infinite: true,
                 slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false
+                slidesToScroll: 1
             } );
         }
+        slide = true;
+        return slide;
     }
 
     function mainAnimate() {
